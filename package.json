@@ -1,0 +1,12 @@
+{
+  "name": "ilmuna-v3",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "pnpm --filter @ilmuna/web dev",
+    "build": "pnpm --filter @ilmuna/web build",
+    "test": "pnpm --filter @ilmuna/web test",
+    "test:e2e": "pnpm --filter @ilmuna/web test:e2e"
+  }
+}
+
