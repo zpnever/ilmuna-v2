@@ -1,5 +1,6 @@
 import type { CurrentUser, RegisterPayload } from "@/shared/api/contracts";
 import { getDefaultUser, getMockDb, getUserByToken, issueSessionForUser } from "@/mocks/fixtures";
+import { createRandomId } from "@/mocks/random";
 
 function jsonResponse(body: unknown, init: ResponseInit = {}) {
   return new Response(JSON.stringify(body), {
@@ -83,7 +84,7 @@ export async function resolveMockRequest(request: Request) {
     }
 
     const user: CurrentUser = {
-      id: `user-${crypto.randomUUID()}`,
+      id: `user-${createRandomId()}`,
       name: payload.name,
       username: payload.username,
       email: payload.email,
@@ -180,4 +181,3 @@ export async function resolveMockRequest(request: Request) {
 
   return null;
 }
-

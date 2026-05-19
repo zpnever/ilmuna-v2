@@ -10,6 +10,7 @@ import type {
   QuranAyahPreview,
   QuranSurahSummary,
 } from "@/shared/api/contracts";
+import { createRandomSegment } from "@/mocks/random";
 
 type FollowUser = Pick<CurrentUser, "id" | "name" | "username" | "imageUrl" | "isVerified">;
 
@@ -266,7 +267,7 @@ export function getUserByToken(token: string | null | undefined) {
 }
 
 export function issueSessionForUser(user: CurrentUser): AuthSession {
-  const accessToken = `token-${user.id}-${crypto.randomUUID().slice(0, 8)}`;
+  const accessToken = `token-${user.id}-${createRandomSegment()}`;
   mockDb.sessions[accessToken] = user.id;
 
   return {
