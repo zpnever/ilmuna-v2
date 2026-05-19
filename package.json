@@ -4,9 +4,12 @@
   "packageManager": "pnpm@10.18.3",
   "scripts": {
     "dev": "pnpm --filter @ilmuna/web dev",
+    "backend:dev": "go run ./apps/backend/cmd/api",
+    "backend:build": "go build ./apps/backend/cmd/api",
+    "backend:migrate": "go run ./apps/backend/cmd/migrate",
+    "backend:test": "go test ./apps/backend/...",
     "build": "pnpm --filter @ilmuna/web build",
     "test": "pnpm --filter @ilmuna/web test",
     "test:e2e": "pnpm --filter @ilmuna/web test:e2e"
   }
 }
-

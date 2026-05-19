@@ -1,0 +1,12 @@
+?   	github.com/ilmuna/backend/cmd/api	[no test files]
+ok  	github.com/ilmuna/backend/internal/app	1.178s
+ok  	github.com/ilmuna/backend/internal/config	(cached)
+?   	github.com/ilmuna/backend/internal/domain	[no test files]
+?   	github.com/ilmuna/backend/internal/http	[no test files]
+?   	github.com/ilmuna/backend/internal/http/handlers	[no test files]
+?   	github.com/ilmuna/backend/internal/http/respond	[no test files]
+?   	github.com/ilmuna/backend/internal/middleware	[no test files]
+?   	github.com/ilmuna/backend/internal/platform/postgres	[no test files]
+ok  	github.com/ilmuna/backend/internal/service	0.697s
+?   	github.com/ilmuna/backend/internal/store	[no test files]
+?   	github.com/ilmuna/backend/internal/store/memory	[no test files]

@@ -4,5 +4,7 @@ dist/
 coverage/
 playwright-report/
 test-results/
+.gocache/
+.gomodcache/
 .DS_Store
-
+.env

@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS notifications;
+DROP TABLE IF EXISTS hadist_bookmarks;
+DROP TABLE IF EXISTS quran_bookmarks;
+DROP TABLE IF EXISTS task_submissions;
+DROP TABLE IF EXISTS tasks;
+DROP TABLE IF EXISTS materials;
+DROP TABLE IF EXISTS forum_comments;
+DROP TABLE IF EXISTS forum_posts;
+DROP TABLE IF EXISTS group_members;
+DROP TABLE IF EXISTS groups;
+DROP TABLE IF EXISTS post_comments;
+DROP TABLE IF EXISTS post_likes;
+DROP TABLE IF EXISTS user_posts;
+DROP TABLE IF EXISTS follows;
+DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS oauth_accounts;
+DROP TABLE IF EXISTS users;
+
+DROP TYPE IF EXISTS submission_status;
+DROP TYPE IF EXISTS task_type;
+DROP TYPE IF EXISTS group_role;
+DROP TYPE IF EXISTS like_type;
+DROP TYPE IF EXISTS post_visibility;
