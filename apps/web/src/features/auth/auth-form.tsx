@@ -178,7 +178,7 @@ export function AuthForm({ mode }: AuthFormProps) {
                 invalid={field.state.meta.errors.length > 0}
                 onBlur={field.handleBlur}
                 onChange={(event) => field.handleChange(event.target.value)}
-                placeholder="demo@ilmuna.id"
+                placeholder={mode === "login" ? "ilmuna@gmail.com" : "nama@contoh.com"}
               />
               {field.state.meta.errors[0] ? (
                 <div className="mt-2 text-sm text-danger">{field.state.meta.errors[0]}</div>
@@ -203,7 +203,7 @@ export function AuthForm({ mode }: AuthFormProps) {
                 invalid={field.state.meta.errors.length > 0}
                 onBlur={field.handleBlur}
                 onChange={(event) => field.handleChange(event.target.value)}
-                placeholder="password123"
+                placeholder={mode === "login" ? "10203040" : "minimal 8 karakter"}
               />
               {field.state.meta.errors[0] ? (
                 <div className="mt-2 text-sm text-danger">{field.state.meta.errors[0]}</div>
@@ -211,6 +211,14 @@ export function AuthForm({ mode }: AuthFormProps) {
             </label>
           )}
         </form.Field>
+
+        {mode === "login" ? (
+          <div className="rounded-2xl border border-gold/30 bg-gold/8 px-4 py-3 text-sm">
+            <div className="font-semibold text-ink">Akun demo</div>
+            <div className="mt-1 text-ink-muted">Email: ilmuna@gmail.com</div>
+            <div className="text-ink-muted">Password: 10203040</div>
+          </div>
+        ) : null}
 
         {formError ? (
           <div className="rounded-2xl border border-danger/20 bg-danger/5 px-4 py-3 text-sm text-danger">

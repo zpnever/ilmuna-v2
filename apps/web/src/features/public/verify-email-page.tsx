@@ -21,7 +21,7 @@ export function VerifyEmailPage() {
         app shell.
       </p>
       <div className="mt-6 rounded-[1.5rem] border border-line bg-white/80 p-4 text-sm text-ink-muted">
-        Email aktif: <span className="font-semibold text-ink">{session?.user.email ?? "demo@ilmuna.id"}</span>
+        Email aktif: <span className="font-semibold text-ink">{session?.user.email ?? "ilmuna@gmail.com"}</span>
       </div>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <Link
@@ -37,4 +37,3 @@ export function VerifyEmailPage() {
     </div>
   );
 }
-

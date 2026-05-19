@@ -56,7 +56,7 @@ export type AuthSession = {
 export type AppShellNavItem = {
   to: AppShellRouteTo;
   label: string;
-  iconKey: "home" | "explore" | "quran" | "hadith" | "groups" | "profile" | "settings" | "admin";
+  iconKey: "home" | "explore" | "quran" | "hadith" | "groups" | "admin";
   access: RouteAccessRule;
 };
 

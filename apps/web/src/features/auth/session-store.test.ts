@@ -12,10 +12,9 @@ describe("session store", () => {
     const session = issueSessionForUser(getDefaultUser());
 
     useSessionStore.getState().setSession(session);
-    expect(useSessionStore.getState().session?.user.email).toBe("demo@ilmuna.id");
+    expect(useSessionStore.getState().session?.user.email).toBe("ilmuna@gmail.com");
 
     useSessionStore.getState().clearSession();
     expect(useSessionStore.getState().session).toBeNull();
   });
 });
-

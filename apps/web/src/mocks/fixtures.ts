@@ -40,7 +40,7 @@ const baseUsers: CurrentUser[] = [
     id: "user-1",
     name: "Salsabila Nur Hidayah",
     username: "salsabila.nur",
-    email: "demo@ilmuna.id",
+    email: "ilmuna@gmail.com",
     role: "member",
     bio: "Mencatat ilmu, membagikan ringkasan, dan belajar dari pengajian rutin setiap pekan.",
     imageUrl: null,
@@ -214,6 +214,7 @@ function createSessions(users: CurrentUser[]) {
 
 function createCredentials(users: CurrentUser[]) {
   return {
+    "ilmuna@gmail.com": { password: "10203040", userId: users[0].id },
     "demo@ilmuna.id": { password: "password123", userId: users[0].id },
     "fauzan@ilmuna.id": { password: "password123", userId: users[1].id },
   } satisfies Record<string, CredentialRecord>;
@@ -279,4 +280,3 @@ export function issueSessionForUser(user: CurrentUser): AuthSession {
 export function getDefaultUser() {
   return mockDb.users[0];
 }
-

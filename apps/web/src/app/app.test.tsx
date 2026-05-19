@@ -22,8 +22,8 @@ describe("app routing", () => {
     const user = userEvent.setup();
     await renderRoute({ route: "/login" });
 
-    await user.type(await screen.findByLabelText(/email/i), "demo@ilmuna.id");
-    await user.type(screen.getByLabelText(/password/i), "password123");
+    await user.type(await screen.findByLabelText(/email/i), "ilmuna@gmail.com");
+    await user.type(screen.getByLabelText(/password/i), "10203040");
     await user.click(screen.getByRole("button", { name: /masuk ke aplikasi/i }));
 
     expect(await screen.findByRole("heading", { name: /Feed sosial sudah punya bentuk awal/i })).toBeInTheDocument();

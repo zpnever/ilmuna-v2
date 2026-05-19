@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
-import { BookOpenText, ChevronRight, Compass, ScrollText, Sparkles, Users } from "lucide-react";
+import { BookOpenText, ChevronRight, Compass, ScrollText, Sparkles } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { landingSnapshotQueryOptions } from "@/shared/api/query-options";
 import { buttonClasses } from "@/shared/ui/button";
@@ -41,9 +41,6 @@ export function LandingPage() {
             </a>
             <a href="#cara-kerja" className="transition hover:text-ink">
               Cara kerja
-            </a>
-            <a href="#ayat" className="transition hover:text-ink">
-              Ayat hari ini
             </a>
           </nav>
           <div className="flex items-center gap-3">
@@ -98,7 +95,7 @@ export function LandingPage() {
                   Cuplikan ayat
                 </div>
                 <div className="arabic-text text-right text-3xl leading-[1.9] text-ink">
-                  {data?.dailyAyah.arabic ?? "وَقُل رَّبِّ زِدْنِي عِلْمًا"}
+                  {data?.dailyAyah.arabic ?? "Wa qul rabbi zidni ilma"}
                 </div>
                 <div className="mt-3 text-sm text-ink-muted">
                   {data?.dailyAyah.translation ??
@@ -139,26 +136,6 @@ export function LandingPage() {
         </div>
       </section>
 
-      <section id="ayat" className="bg-ink py-16 text-white md:py-24">
-        <div className="section-shell grid gap-8 lg:grid-cols-[0.45fr_0.55fr] lg:items-center">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Ayat hari ini</div>
-            <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-              Landing menampilkan kutipan yang terasa khusyuk, bukan sekadar dekoratif.
-            </h2>
-          </div>
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
-            <div className="arabic-text text-right text-4xl leading-[1.9] text-white">
-              {data?.dailyAyah.arabic ?? "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ"}
-            </div>
-            <p className="mt-5 text-base leading-8 text-white/75">
-              {data?.dailyAyah.translation ??
-                "Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya."}
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="cara-kerja" className="section-shell py-16 md:py-24">
         <div className="grid gap-5 lg:grid-cols-3">
           {[
@@ -191,7 +168,9 @@ export function LandingPage() {
       <section className="section-shell py-16 md:py-24">
         <div className="glass-panel rounded-[2rem] p-8 md:p-10">
           <div className="max-w-2xl">
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-gold-strong">Mulai sekarang</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-gold-strong">
+              Mulai sekarang
+            </div>
             <h2 className="mt-3 font-display text-4xl font-semibold text-ink md:text-5xl">
               Frontend sudah punya fondasi yang bisa langsung diteruskan ke fase feed dan referensi.
             </h2>
@@ -225,4 +204,3 @@ export function LandingPage() {
     </div>
   );
 }
-
